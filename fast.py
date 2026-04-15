@@ -5,7 +5,7 @@ import numpy as np
 
 app = FastAPI()
 
-model = joblib.load(r"E:\netcore-copilot\4netcore\inventory_model.pkl")
+model = joblib.load("inventory_model.pkl")
 
 @app.post("/predict")
 def predict(data: dict):
