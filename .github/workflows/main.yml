@@ -8,5 +8,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Curl request
-        run: curl  https://netpredic.onrender.com/predict
+      - name: Call Predict API
+        run: |
+          curl -X POST https://your-api.onrender.com/predict \
+          -H "Content-Type: application/json" \
+          -d '{"lead_time":5,"stock":100,"feature1":10,"feature2":20}'
